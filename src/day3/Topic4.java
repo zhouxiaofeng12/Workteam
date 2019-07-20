@@ -40,9 +40,6 @@ public class Topic4 {
         HashMap<String, ArrayList<String>> hashMap = new HashMap<>();
 
         for (int i = 0; i < arrayList.size(); i++) {
-            System.out.println(arrayList.get(i));
-            System.out.println(arrayList.get(i).hobbyMap);
-            System.out.println(arrayList.get(i).hobbyMap.keySet());
 
             //分组
             Set<String> s = arrayList.get(i).hobbyMap.keySet();
@@ -61,10 +58,7 @@ public class Topic4 {
                     arrayList1.add(arrayList.get(i).name);
                     hashMap.put(key, arrayList1);
                 }
-
             }
-
-
         }
 
         System.out.println(hashMap);

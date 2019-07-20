@@ -140,6 +140,11 @@ public class Topic10 {
 
 }
 
+/**
+ *    Collections.sort(list);
+ *
+ *    Comparator  Comparable
+ */
 class User implements Comparable<User>{
     protected String name;
     protected int age;
@@ -166,6 +171,7 @@ class User implements Comparable<User>{
 
     @Override
     public int compareTo(User o) {
+        //比较都用他 topic10
         if (this.score > o.score){
             return 1;
         }

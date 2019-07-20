@@ -18,6 +18,11 @@ package homework;
  * @author haoc
  */
 
+/**
+ * 考虑的点是哪里:
+ * 1.基础I/0,集合
+ * 2.健壮性
+ */
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -35,7 +40,6 @@ public class topic3 {
         BufferedReader reader = null;
         User user = null;
         HashMap<String, User> userHash = new HashMap<>();
-
 
         // 2.定义文件读取流
         // 使用BufferedReader时,就这里不同
@@ -121,13 +125,26 @@ class User {
     String score;
     String address;
 
-    public User(String id, String name, String gender, String score, String address) {
+    public User() {
+    }
+
+    public User(String id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public User(String id, String name, String gender) {
         this.id = id;
         this.name = name;
         this.gender = gender;
-        this.score = score;
+    }
+
+    public User(String id, String name, String gender, String score, String address) {
+        //调用User 上面的构造方法
+        this(id,name,gender);
         this.address = address;
     }
+
 
     public String getId() {
         return id;
